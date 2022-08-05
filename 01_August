@@ -1,0 +1,37 @@
+Q1. Welcome To Java :- 
+
+public class Main
+{
+  public static void main(String args[]) 
+  {
+    System.out.println("Hello, World.");
+    System.out.println("Hello, Java.");
+  }
+}
+
+Q2. Star Pattern :-
+
+public class Main
+{
+  public static void main(String args[]) 
+  {
+    System.out.println("*");
+    System.out.println("***");
+    System.out.println("*****");
+  }
+}
+
+Q3. Five Stars :-
+
+public class Main
+{
+  public static void main(String args[]) 
+  {
+    System.out.println("* * * * *");
+    System.out.println("*");
+    System.out.println("*");
+    System.out.println("*");
+    System.out.println("*");
+    System.out.println("*");
+  }
+}
