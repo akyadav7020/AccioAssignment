@@ -1,0 +1,171 @@
+Q1. PrintSum10 :-
+
+public class Main
+{
+	public static void main (String[] args) 
+	{
+      int sum = 0;
+      int num = 10;
+      for(int i=1; i<=num; i++)
+      {
+          sum = sum +i;
+      }
+      System.out.println(sum);
+      }
+}
+
+Q2. Sum of Natural Numbers :-
+
+import java.util.*;
+public class Main
+{
+	public static void main (String[] args)
+	{
+		  Scanner sc =new Scanner(System.in);
+      int n = sc.nextInt();
+      long sum =0;
+      for(int i=1; i<=n;i++)
+      {
+          sum = sum+i;
+      }
+      System.out.println(sum);
+	}
+}
+
+Q3. Reverse digits of a Number :-
+
+import java.util.*;
+public class Main
+{
+	public static void main (String[] args)
+	{
+	    Scanner sc = new Scanner(System.in);
+      int  n = sc.nextInt();
+      int reverse = 0;
+      int i=n;
+      while(i>0)
+      {
+         int digit = i%10;
+         reverse = reverse*10 + digit; 
+         i=i/10;
+	    }
+      System.out.println(reverse);	  
+	}
+}
+
+Q4. Largest Number At Least Twice of Others :-
+
+import java.util.*;
+public class Main
+{
+	public static void main (String[] args)
+	{
+		  
+	}
+}
+
+Q5. Factorial with loop :-
+
+import java.util.*;
+public class Main
+{
+	public static void main (String[] args)
+	{
+		  Scanner sc = new Scanner (System.in);
+      int n = sc.nextInt();
+      long fact = 1;
+      for(int i=1; i<=n;i++)
+      {
+          fact = fact * i;
+      }
+      System.out.println(fact);  
+	}
+}
+
+Q6. HCF of two Numbers :-
+
+import java.util.*;
+public class Main
+{
+	public static void main (String[] args)
+	{
+		    Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int rem = 1;
+        while (rem>0)
+        {
+            rem = a%b;
+            a=b;
+            b = rem;
+        }
+        System.out.println(a);  
+	}
+}
+
+Q7. Power of a Numbe :-
+
+import java.util.*;
+public class Main
+{
+	public static void main (String[] args)
+	{
+	    Scanner sc = new Scanner(System.in);
+      int a = sc.nextInt();
+      int b = sc.nextInt();
+	    int pow =1;
+      for (int i=0;i<b;i++){
+        pow = pow*a;
+      }
+      System.out.println(pow);	  
+	}
+}
+
+Q8. ArmstrongNumber :-
+
+public class Main
+{
+	public static void main (String[] args)
+	{
+		  int n;     
+      for(int i=1; i<=500;i++){
+        n = i;
+        int sum = 0;
+        while(n>0){
+        int digit =n%10;
+        sum = sum + (digit*digit*digit);
+        n = n/10;
+      }
+        if(sum==i)  System.out.println(i);
+      
+      }  
+	}
+}
+
+Q9. PEAK ELEMENT :-
+
+import java.util.*;
+public class Main
+{
+	public static void main (String[] args)
+	{
+		  Scanner sc = new Scanner(System.in);
+      int n = sc.nextInt();
+      int a[] = new int[n];
+      for(int i=0;i<n;i++){
+        a[i] = sc.nextInt();
+      }
+      for(int i=0;i<n;i++){
+        if (i==0){
+          if (a[i]>=a[i+1]) {
+            System.out.print(i); break;}}
+        else if(i<n-1){
+          if (a[i]>=a[i-1] && a[i] >= a[i+1]){
+          System.out.println(i);
+          break;}}
+        else {
+          if  (a[i]>= a[i-1]) System.out.print(i);
+        else System.out.print("-1");}
+        }  
+	}
+}
