@@ -60,7 +60,38 @@ public class Main
 {
 	public static void main (String[] args)
 	{
-		  
+	    Scanner sc = new Scanner(System.in);
+	    int n = sc.nextInt();
+	    int a[]= new int[n];
+	    int b[] = new int[n];
+	    int output = 0;
+	    for(int i=0;i<n;i++)
+	    {
+	        a[i]=sc.nextInt();
+	    }
+	    for(int i=0;i<n;i++)
+	    {
+            for(int j=i+1;j<n;j++)
+	        {
+	            if(a[i]>=a[j])
+	            {
+	                int temp =a[i];
+	                a[i]=a[j];
+	                a[j] = temp;
+	            }
+	        }
+	    }
+	    for(int i=0;i<n-1;i++)
+	    {
+	        if(a[n-1]>=2*a[i]) output=1;
+	        else 
+	        {
+	            output = -1;
+	            break;
+	        }
+	        
+	    }
+	    System.out.print(output);
 	}
 }
 
@@ -103,7 +134,7 @@ public class Main
 	}
 }
 
-Q7. Power of a Numbe :-
+Q7. Power of a Number :-
 
 import java.util.*;
 public class Main
