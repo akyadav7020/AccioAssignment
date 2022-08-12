@@ -1,0 +1,215 @@
+Q1. Sum of Array Except Self :
+
+import java.util.*;
+public class HelloWorld
+    {
+        public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        for (int i=0;i<n;i++) arr[i] = sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+          int sum =0;
+          for(int j=0; j<n;j++)
+            {
+              if(i!=j)
+              {
+                sum = sum + arr[j];
+              }
+            }
+        System.out.print(sum + " ");   
+        }
+    }
+}
+
+Q2. Subarray sum divisible by k :
+
+import java.util.*;
+public class HelloWorld
+    {
+        public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+        int a[] = new int[n];
+        for (int i=0;i<n;i++) a[i] = sc.nextInt();
+        int count = 0;
+        for(int i=0;i<n;i++)
+        {
+            int sum = 0;
+            for(int j=i;j<n;j++)
+            {
+                sum+= a[j];
+                if(sum%k==0) count++;
+            }
+        }
+        System.out.println(count);
+    }
+}
+
+Q3. 2nd Largest from array :
+
+import java.util.*;
+class Main{
+        public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int []a = new int[n];
+        for (int i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        int max =a[0];
+        int second_max = a[1];
+        if (second_max > max) //Swaping values
+        {
+            int temp = max;
+            max = second_max; 
+            second_max = temp;
+        }
+        for(int i=2;i<n;i++)
+        {
+            if(a[i]>second_max && a[i]<max) second_max = a[i]; //assigned as 2nd_Max
+            else if (a[i]>=max) {
+                second_max = max;
+                max = a[i];
+            }
+        }
+        System.out.print(second_max);
+     }
+}
+
+Q4. Largest Number :
+Q5. FACING THE SUN :
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int h[] = new int[n];
+        for (int i=0;i<n;i++) h[i] = sc.nextInt();
+        int nearest_height = h[0];
+        int count=1;
+        for(int i=1;i<n;i++)
+        {
+            if (h[i]>=nearest_height)
+            {
+                count++;
+                nearest_height = h[i];
+            }
+        }
+        System.out.print(count);
+     }
+}
+
+Q6. Average Calculator :
+
+import java.util.*;
+public class HelloWorld
+    {
+        public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int a[] = new int[n];
+        int sum =0;
+        for (int i=0;i<n;i++) 
+        {
+            a[i] = sc.nextInt();
+            sum = sum + a[i];
+        }
+        System.out.print(sum/n);
+    }
+}
+
+Q7. Searching a number :
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+        int arr[] = new int[n];
+        for (int i=0;i<n;i++) arr[i] = sc.nextInt();
+        int pos = -1;
+        for(int i=0;i<n;i++)
+        {
+            if (arr[i] == k)
+            {
+                pos = i+1;
+                break;
+            }
+        }
+        System.out.print(pos);
+     }
+}
+
+Q8. Divisible Sum Pairs :
+
+import java.util.*;
+public class HelloWorld
+    {
+        public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+        int arr[] = new int[n];
+        for (int i=0;i<n;i++) arr[i] = sc.nextInt();
+        int count =0;
+        for(int i=0;i<n;i++)
+        {
+            for(int j=i+1;j<n;j++)
+            {
+                if((arr[i]+arr[j])%k==0) count++;
+            }
+        }
+        System.out.println(count);
+    }
+}
+
+Q9. Sorted Insert Position :
+
+import java.util.*;
+public class Main {
+        public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int a[] = new int[n];
+        for (int i=0;i<n;i++) a[i] = sc.nextInt();
+        int b = sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            if(a[i]>=b) {System.out.print(i); break;}
+        }
+    }
+}
+
+Q10. Marc Cakewalk :
+Q11. Angry Professor :
+
+import java.util.*;
+public class Main {
+        public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        for (int i=0;i<t;i++) 
+        {
+           int n = sc.nextInt();
+           int k = sc.nextInt();
+           int a[] = new int[n];
+           int count=0;
+           for (int j=0;j<n;j++)
+           {
+                a[i]=sc.nextInt();
+                if(a[i]>=0) count++;
+           }
+           if(count>=k) System.out.println("NO");
+           else System.out.println("YES");
+        }
+    }
+}
+
