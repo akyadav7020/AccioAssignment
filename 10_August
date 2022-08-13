@@ -81,6 +81,37 @@ class Main{
 }
 
 Q4. Largest Number :
+
+import java.util.*;
+public class Main {
+        public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int a[] = new int[n];
+        for(int i=0;i<n;i++) a[i]=sc.nextInt();//Taking array
+        for(int i =0;i<n;i++) //Sorting array in dscending order based on number formed using concate of 2 numbers
+        {
+            for(int j=i+1;j<n;j++) 
+            {
+                int b = Integer.valueOf(String.valueOf(a[i])+String.valueOf(a[j])); //adding after Coverting to string then again converting to integer.
+                int c = Integer.valueOf(String.valueOf(a[j])+String.valueOf(a[i]));
+                if (c>b)
+                { //Swaping position 
+                    int t = a[i];
+                    a[i]= a[j];
+                    a[j] = t;
+                }
+            }
+        }
+        int number =0;
+        for(int i=0;i<n;i++)
+        {
+            number = Integer.valueOf(String.valueOf(number)+String.valueOf(a[i]));
+        }
+        System.out.println(number);
+    }
+}
+
 Q5. FACING THE SUN :
 
 import java.util.*;
