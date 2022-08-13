@@ -179,16 +179,39 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int a[] = new int[n];
+        int pos =-1;
         for (int i=0;i<n;i++) a[i] = sc.nextInt();
         int b = sc.nextInt();
         for(int i=0;i<n;i++)
         {
-            if(a[i]>=b) {System.out.print(i); break;}
+            if(a[i]>=b) {pos = i; break;}
         }
+        if(pos == -1) System.out.println(n-1);
+        else System.out.print(pos);
     }
 }
 
 Q10. Marc Cakewalk :
+
+import java.util.*;
+public class Main {
+        public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int a[] = new int[n];
+        for (int i=0;i<n;i++) a[i]=sc.nextInt();
+        Arrays.sort(a);
+        long ans=0;
+        long k=1;
+        for(int i=0;i<n;i++)
+        {
+            ans = ans + k*a[n-1-i];
+            k=k*2;
+        }
+        System.out.println(ans);
+    }
+}
+
 Q11. Angry Professor :
 
 import java.util.*;
