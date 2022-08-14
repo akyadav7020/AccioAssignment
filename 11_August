@@ -1,0 +1,51 @@
+Q1. Spirally traversing a matrix :
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int r = sc.nextInt();
+		int c = sc.nextInt();
+		int m[][]= new int[r][c];
+		for(int i=0;i<r;i++) {
+		    for(int j=0;j<c;j++){
+		        m[i][j]=sc.nextInt();
+		    }
+		}
+		int r_min =0; int r_max =r-1; 
+		int c_min =0; int c_max = c-1;
+		int count = 0; int d=0;
+		while(count < r*c)
+		{
+		    if(d==0){
+		    for(int i=c_min;i<=c_max;i++) {
+		        System.out.print(m[r_min][i]+" ");
+		        count++;} r_min+=1;}
+		    
+		    else if(d==1){
+		    for(int i=r_min;i<=r_max;i++) {
+		        System.out.print(m[i][c_max]+" ");
+		        count++;} c_max-=1;}
+		    
+		    else if(d==2){
+		    for(int i=c_max;i>=c_min;--i) {
+		        System.out.print(m[r_max][i]+" ");
+		        count++;} r_max-=1;}
+		    
+		    else if(d==3){
+		    for(int i=r_max;i>=r_min;i--) {
+		        System.out.print(m[i][c_min]+" ");
+		        count++;} c_min+=1;}
+		    d = (d+1)%4;
+		    //System.out.println(" d="+d);
+		}
+	}
+}
+
+
+Q2. Transpose of Matrix :
+Q3. Alt Matrix Sum :
+Q4. Alternate Manner Matrix Traversal :
+Q5. Boolean Matrix Sum :
+Q6. Rotate a Matrix by 90 Degree :
