@@ -1,4 +1,7 @@
 Q1. Ptice :
+
+
+
 Q2. Shuffle String :
 
 import java.util.*;
@@ -7,9 +10,9 @@ public class Main
 	public static void main (String[] args) 
 	{
 		  Scanner sc = new Scanner(System.in);
-      int n =sc.nextInt();
-      String s = sc.next();
-      int a[] = new int[n];
+      int n =sc.nextInt(); 		// 8
+      String s = sc.next();		// codeleet
+      int a[] = new int[n];		// [4,5,6,7,0,1,2,3]
       for(int i=0;i<n;i++){
         a[i] = sc.nextInt();
       }
@@ -29,7 +32,7 @@ public class Main
 	public static void main (String[] args) 
 	{
 		  Scanner sc = new Scanner(System.in);
-      String s = sc.next();
+      String s = sc.next();		// Ram-Sita
       String []a = s.split("-");
       String ans ="";
       for (int i=0;i<a.length;i++){
@@ -40,6 +43,25 @@ public class Main
 }
 
 Q4. Time Conversion :
+
+import java.util.*;
+public class Main
+{
+	public static void main (String[] args) 
+	{
+		  Scanner sc = new Scanner(System.in);
+      String s = sc.next();  		// 11:11:11PM or 12:12:12PM or 12:12:12Am or 11:11:11AM
+      String []a = s.split(":");
+      if(a[2].charAt(2)=='A') {
+          if (a[0].equals("12")) a[0] ="00";
+        }
+      else  { 
+          if(Integer.valueOf(a[0])<12) a[0]= String.valueOf(Integer.valueOf(a[0])+12);
+      }
+      System.out.print(a[0]+":"+a[1]+":"+a[2].substring(0,2));
+	}
+}
+
 Q5. Hey! :
 
 import java.util.*;
@@ -48,7 +70,7 @@ public class Main
 	public static void main (String[] args) 
 	{
 		  Scanner sc =new Scanner(System.in);
-      String s = sc.next();
+      String s = sc.next();   		// hey or heeeeey
       System.out.println(s.replace("e" ,"ee"));
 	}
 }
