@@ -1,0 +1,54 @@
+Q1. Ptice :
+Q2. Shuffle String :
+
+import java.util.*;
+public class Main
+{
+	public static void main (String[] args) 
+	{
+		  Scanner sc = new Scanner(System.in);
+      int n =sc.nextInt();
+      String s = sc.next();
+      int a[] = new int[n];
+      for(int i=0;i<n;i++){
+        a[i] = sc.nextInt();
+      }
+      String ans = "";
+      for(int i =0;i<n;i++){
+        ans+=s.charAt(a[i]);
+      }
+      System.out.println(ans);
+	}
+}
+
+Q3. Autori :
+
+import java.util.*;
+public class Main
+{
+	public static void main (String[] args) 
+	{
+		  Scanner sc = new Scanner(System.in);
+      String s = sc.next();
+      String []a = s.split("-");
+      String ans ="";
+      for (int i=0;i<a.length;i++){
+          ans += a[i].charAt(0);
+      }
+      System.out.print(ans);
+	}
+}
+
+Q4. Time Conversion :
+Q5. Hey! :
+
+import java.util.*;
+public class Main
+{
+	public static void main (String[] args) 
+	{
+		  Scanner sc =new Scanner(System.in);
+      String s = sc.next();
+      System.out.println(s.replace("e" ,"ee"));
+	}
+}
